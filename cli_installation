@@ -24,5 +24,21 @@ workflow.19001.delta.repository.zip
 5.go to /home/oracle/baw18/IM64 and run the command
 ./installc -acceptLicense -installationDirectory /home/oracle/IBM/InstallationManager/eclipse -sP
 
-6.now install baw and was
+6.now install baw and was run the following commands
+cd /home/oracle/IBM/InstallationManager/eclipse/tools
+./imcl listAvailablePackages -repositories /home/oracle/baw18/repository/WAS/repository.conf
+./imcl listAvailablePackages -repositories /home/oracle/baw18/repository/WBI/repository.conf
+
+./imcl install com.ibm.websphere.ND.v85_8.5.5013.20180112_1418 com.ibm.bpm.ADV.v85_8.6.10018001.20180628_0740 -repositories /home/oracle/baw18/repository/WAS/,/home/oracle/baw18/repository/WBI/ -acceptLicense -sP -installationDirectory /home/oracle/IBM/WebSphere/AppServer -properties user.wasjava=java8
+
+Now the bpm and was are installed
+
+7.add fixpack for was and bpm
+./imcl listAvailablePackages -repositories /home/oracle/WAS8.5/repository.conf
+./imcl install com.ibm.websphere.ND.v85_8.5.5015.20190128_1828 -repositories /home/bandaru/FX/repository.config -installationDirectory /home/bandaru/IBM/WebSphere/AppServer -acceptLicense -sP
+
+./imcl listAvailablePackages -repositories /home/oracle/bpm19/repository.conf
+
+
+
 
