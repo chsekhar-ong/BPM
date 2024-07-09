@@ -1,0 +1,28 @@
+1.Set the correct hostname on following files
+ vi /etc/hosts
+ vi /etc/hostname
+ vi /etc/sysconfig/network
+
+2.install oracledb in oracle user
+
+3.if oracledb is not installed in same image follow this steps
+groupadd oinstall
+useradd -g oinatall oracle
+passwd oracle
+
+4.get the files bpm18
+BAW_18_0_0_1_Linux_x86_1_of_3.tar.gz
+BAW_18_0_0_1_Linux_x86_3_of_3.tar.gz
+BAW_18_0_0_1_Linux_x86_3_of_3.tar.gz
+
+and bpm19 and was_fp 8.5.5.15
+workflow.19001.delta.repository.zip
+8.5.5-WS-WAS-FP015-part1.zip
+8.5.5-WS-WAS-FP015-part2.zip
+8.5.5-WS-WAS-FP015-part3.zip
+
+5.go to /home/oracle/baw18/IM64 and run the command
+./installc -acceptLicense -installationDirectory /home/oracle/IBM/InstallationManager/eclipse -sP
+
+6.now install baw and was
+
