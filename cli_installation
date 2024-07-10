@@ -6,9 +6,21 @@
 2.install oracledb in oracle user
 
 3.if oracledb is not installed in same image follow this steps
+su root
 groupadd oinstall
 useradd -g oinatall oracle
 passwd oracle
+vi /etc/security/limits.conf
+oracle   soft   nofile    65536
+oracle   hard   nofile    65536
+oracle   soft   nproc    16384
+oracle   hard   nproc    16384
+oracle   soft   stack    32768
+oracle   hard   stack    32768
+oracle   hard   memlock    134217728
+oracle   soft   memlock    134217728
+Note: add this lines on bottom of the file
+
 
 4.get the files bpm18
 BAW_18_0_0_1_Linux_x86_1_of_3.tar.gz
