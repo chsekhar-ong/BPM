@@ -35,10 +35,10 @@ Now the bpm and was are installed
 
 7.add fixpack for was and bpm
 ./imcl listAvailablePackages -repositories /home/oracle/WAS8.5/repository.conf
-./imcl install com.ibm.websphere.ND.v85_8.5.5015.20190128_1828 -repositories /home/oracle/was_fp/repository.config -installationDirectory /home/bandaru/IBM/WebSphere/AppServer -acceptLicense -sP
+./imcl install com.ibm.websphere.ND.v85_8.5.5015.20190128_1828 -repositories /home/oracle/was_fp/repository.config -installationDirectory /home/oracle/IBM/WebSphere/AppServer -acceptLicense -sP
 
 ./imcl listAvailablePackages -repositories /home/oracle/bpm19/repository.conf
-./imcl install com.ibm.bpm.ADV.v85_8.6.10019001.20190329_1952 -repositories /home/oracle/bpm19/repository.config -installationDirectory /home/bandaru/IBM/WebSphere/AppServer -acceptLicense -sP
+./imcl install com.ibm.bpm.ADV.v85_8.6.10019001.20190329_1952 -repositories /home/oracle/baw19/repository.config -installationDirectory /home/oracle/IBM/WebSphere/AppServer -acceptLicense -sP
 
 
 
