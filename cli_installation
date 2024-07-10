@@ -41,6 +41,9 @@ cd /home/oracle/IBM/InstallationManager/eclipse/tools
 ./imcl listAvailablePackages -repositories /home/oracle/baw18/repository/WAS/repository.conf
 ./imcl listAvailablePackages -repositories /home/oracle/baw18/repository/WBI/repository.conf
 
+ulimit -a
+ulimit -n 65536
+
 ./imcl install com.ibm.websphere.ND.v85_8.5.5013.20180112_1418 com.ibm.bpm.ADV.v85_8.6.10018001.20180628_0740 -repositories /home/oracle/baw18/repository/WAS/,/home/oracle/baw18/repository/WBI/ -acceptLicense -sP -installationDirectory /home/oracle/IBM/WebSphere/AppServer -properties user.wasjava=java8
 
 Now the bpm and was are installed
@@ -52,6 +55,12 @@ Now the bpm and was are installed
 ./imcl listAvailablePackages -repositories /home/oracle/bpm19/repository.conf
 ./imcl install com.ibm.bpm.ADV.v85_8.6.10019001.20190329_1952 -repositories /home/oracle/baw19/repository.config -installationDirectory /home/oracle/IBM/WebSphere/AppServer -acceptLicense -sP
 
+8.now go to the /home/oracle/IBM/WebSphere/AppServer/BPM/samples/config/advanced
+take the backup of file and edit the configuration file
+
+9.run the configuration file /home/oracle/IBM/WebSphere/AppServer/bin
+./BPMConfig.sh -validate /home/oracle/Advanced-PC-ThreeClusters-Oracle.properties
+./BPMConfig.sh -create -de /home/oracle/Advanced-PC-ThreeClusters-Oracle.properties
 
 
 
