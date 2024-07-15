@@ -1,0 +1,28 @@
+In IBM Business Automation Workflow (BAW), the three-cluster topology is a way to organize and manage different types of workloads and services by grouping them into separate clusters. This helps improve scalability, performance, and maintainability. The three clusters are:
+
+    Application Cluster (AppCluster)
+    Messaging Cluster (MECluster)
+    Support Cluster (SupCluster)
+How It Works
+
+Each cluster is designed to handle specific types of tasks or services within the IBM BAW environment. Here’s an overview of each cluster and its role:
+1. Application Cluster (AppCluster)
+
+    Capabilities: Application
+    Databases: ProcessServerDb, IcnDb, SharedDb, TosDb, DosDb
+    Components: e.g., ProcessPortal
+    Usage: This cluster handles the main application workloads, including process execution, document management, and shared services.
+
+2. Messaging Cluster (MECluster)
+
+    Capabilities: Messaging
+    Databases: SharedDb
+    Usage: This cluster is responsible for handling messaging services within the IBM BAW environment. It includes databases that support messaging capabilities,
+    ensuring reliable communication between different components and services.
+
+3. Support Cluster (SupCluster)
+
+    Capabilities: Support
+    Databases: PerformanceDb
+    Usage: This cluster is used for support-related services, such as performance monitoring and management. It typically includes the Performance Data
+    Warehouse (PDW) database for storing performance metrics and analysis data.
