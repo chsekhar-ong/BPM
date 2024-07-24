@@ -1,0 +1,35 @@
+required files and untar it
+
+BAW_Enp_21.0.3_Lnx641.tar.gz
+BAW_Etp_21.0.3_Lnx64_2of3.tar.gz
+BAW_Etp_21.0.3_Lnx64_3of3.tar.gz
+
+
+
+cd /home/oracle/baw21/IM64
+
+./userinstc -installationDirectory /home/oracle/IBM/InstallationManager/eclipse/ -acceptLicense -sP
+
+cd /home/oracle/IBM/InstallationManager/eclipse/tools/
+
+./imcl listAvailablePackages -repositories /home/oracle/baw21/repository/WAS/repository.config 
+
+./imcl listAvailablePackages -repositories /home/oracle/baw21/repository/WBI/repository.config
+
+
+./imcl install com.ibm.websphere.ND.v85_8.5.5020.20210708_1826 com.ibm.bpm.ADV.v85_8.6.30021030.20211214_2315 -repositories /home/oracle/Downloads/repository/WAS/,/home/oracle/Downloads/repository/WBI -installationDirectory /home/oracle/IBM/WebSphere/AppServer/ -acceptLicense -sP
+
+cd  /home/oracle/IBM/WebSphere/AppServer/bin
+
+./DBUpgrade.sh -profileName PSDmgr01 -de PCDE
+
+NOTE: PSDmgr01 is dmgr name 
+NOTE: PCDE is deployment environment name is optional 
+
+cd /home/oracle/IBM/WebSphere/AppServer/profiles/ PSDmgr01/bin
+
+./bootstrapProcessServerData.sh -clusterName AppCluster
+
+NOTE: AppCluster is cluster name of that dmgr appcluster
+
+
