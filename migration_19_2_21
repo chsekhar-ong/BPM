@@ -17,7 +17,8 @@ cd /home/oracle/IBM/InstallationManager/eclipse/tools/
 ./imcl listAvailablePackages -repositories /home/oracle/baw21/repository/WBI/repository.config
 
 
-./imcl install com.ibm.websphere.ND.v85_8.5.5020.20210708_1826 com.ibm.bpm.ADV.v85_8.6.30021030.20211214_2315 -repositories /home/oracle/Downloads/repository/WAS/,/home/oracle/Downloads/repository/WBI -installationDirectory /home/oracle/IBM/WebSphere/AppServer/ -acceptLicense -sP
+./imcl install com.ibm.websphere.ND.v85_8.5.5020.20210708_1826 com.ibm.bpm.ADV.v85_8.6.30021030.20211214_2315 
+-repositories /home/oracle/Downloads/repository/WAS/,/home/oracle/Downloads/repository/WBI -installationDirectory /home/oracle/IBM/WebSphere/AppServer/ -acceptLicense -sP
 
 cd  /home/oracle/IBM/WebSphere/AppServer/bin
 
@@ -32,4 +33,11 @@ cd /home/oracle/IBM/WebSphere/AppServer/profiles/ PSDmgr01/bin
 
 NOTE: AppCluster is cluster name of that dmgr appcluster
 
+
+=====================================================================================================================================================================================
+Creating ssl certificates in cli
+
+cd /home/oracle/IBM/WebSphere/AppServer/java/jre/bin
+
+./ikeycmd 
 
