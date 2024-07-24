@@ -1,0 +1,11 @@
+1.
+Online Process Servers:
+
+    These are connected to the Process Center and you can see their status in the Servers tab.
+    You can choose a snapshot in the Process Center and deploy it directly to these servers while they are online.
+
+Offline Process Servers:
+
+    These servers are defined in the Process Center but are not connected or communicating with it.
+    To deploy to these servers, you create a deployment package, transfer it to the target machine, and deploy it using command-line (wsadmin) commands.
+
