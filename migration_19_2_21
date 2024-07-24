@@ -39,5 +39,7 @@ Creating ssl certificates in cli
 
 cd /home/oracle/IBM/WebSphere/AppServer/java/jre/bin
 
-./ikeycmd 
+./ikeycmd -keydb -create -db /home/oracle/key.kdb -type pkcs12 -expire 365 -stash
+
+./ikeycmd -cert -create -db /home/oracle/key.kdb  -label EIDIKO -dn "CN=myhost,O=myorg,C=US" -size 2048 -file certreq.arm -stashed
 
