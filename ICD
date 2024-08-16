@@ -1,0 +1,38 @@
+cli db2 configuration 
+
+/opt/IBM/SMP/ConfigTool/samples
+DB2_WebSphere_Sample_Input.properties
+
+/opt/IBM/SMP/ConfigTool/scripts
+reconfigurePae.sh
+
+./reconfigurePae.sh -action updateDatabaseConfiguration  -dbserverhost icd.eidikointernal.com 
+-dbserverport 50000 -dbname MAXDB76 -dbuser db2inst1 -dbpwd sarasu10  -inputfile /opt/IBM/SMP/ConfigTool/samples/DB2_WebSphere_Sample_Input.properties
+
+for profile creation 
+/opt/IBM/SMP/ConfigTool/samples
+cfg-silent-linux.properties
+
+installation of WAS using responce file 
+=======================================
+
+default file will be present where you unzip the IM file
+install.xml
+go to the path /opt/IBM/InstallationManager/eclipse/tools/
+./imcl -c
+
+Select
+P. Preferences
+
+Select
+1. Repositories
+
+Select
+D. Add Repository
+
+A. Apply Changes and Return to Preferences Menu
+
+R. Return to Main Menu
+
+1. Install
+
