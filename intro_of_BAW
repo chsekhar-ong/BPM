@@ -40,5 +40,9 @@ Offline Process Servers:
 
 ==============================================================================================================================================================================
 
+while we get session time out for process center, process admin .. etc consoles we have to change in ear files path
+/home/oracle/IBM/WebSphere/AppServer/profiles/Node1PS/installedApps/PSCell1
+
+
 
 
