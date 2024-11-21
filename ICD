@@ -13,6 +13,24 @@ for profile creation
 /opt/IBM/SMP/ConfigTool/samples
 cfg-silent-linux.properties
 
+startting admin mode
+====================
+stop the servers
+./enchryptproperties.sh
+./configdb.sh
+./updatedb.sh
+/opt/IBM/SMP/maximo/tools/maximo
+
+check the configuration
+maximo.properties  (file location)
+opt/IBM/SMP/maximo/applications/maximo/properties/maximo.properties.orig/maximo.properties
+/opt/IBM/SMP/maximo/applications/maximo/properties/maximo.properties
+
+now start admin mode
+/opt/IBM/SMP/maximo/tools/maximo/internal
+./setAdminMode -mON
+./setAdminMode -mOFF
+
 installation of WAS using responce file 
 =======================================
 
