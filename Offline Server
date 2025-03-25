@@ -5,7 +5,7 @@
 5.Now rename this as mv edeeff\ -\ offlineSnap.zip /home/was/edeeff_offlineSnap.zip
 6.cd /home/was/IBM/WebSphere/AppServer/bin
 7. now Deployment of This snapshot on ProcessServer using ./wsadmin.sh
-8.https://www.ibm.com/docs/en/baw/24.x?topic=scripting-bpminstallpackage
+8.Follow https://www.ibm.com/docs/en/baw/24.x?topic=scripting-bpminstallpackage
 9../wsadmin.sh -conntype SOAP -port 8880 -host ProcessServer.mycompany.com -user admin -password admin -lang jython    // the port 8880 is port of Single Cluster Member in ProcessServer(username,password of wasConsole of ProcessServer)
   wsadmin>AdminTask.BPMInstallPackage('[-inputFile /home/was/edeeff_offlineSnap.zip -showSnapshotInfo true]')
 
